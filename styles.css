@@ -63,8 +63,14 @@ body .tip-app .right-block .box {
           align-items: baseline;
 }
 
+body .tip-app .right-block .title {
+  color: white;
+  text-align: start;
+}
+
 body .tip-app .right-block .totals {
   font-size: 24px;
+  font-weight: 700;
 }
 
 body .tip-app .right-block .totals input[type="number"] {
