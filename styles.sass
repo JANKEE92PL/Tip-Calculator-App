@@ -36,38 +36,84 @@ body
     .tip-app
         margin: 80px auto 0
         width: 75%
-        background-color: lightgrey
+        background-color: $white
+        border-radius: $radius
         display: flex
         justify-content: space-evenly
         align-items: center
         padding: 2em
         // * Left-block 
         .left-block
-            background-color: $white
-            border-radius: $radius
             padding: 2em
             width: 70%
             height: 50vh
             .title
                 text-align: start
+                color: $darkgrayish-cyan
             .box
-
                 .input
                     display: flex
                     align-items: center
                     justify-content: space-between
                     background-color: $lightgrayish-cyan
                     border-radius: $radius / 3
+                    i
+                        color: $darkgrayish-cyan
                     input[type="number"]
                         text-align: end
                         background-color: rgba(0, 0, 0, 0)
                         border: none
-                        width: 100px
+                        width: 120px
                         font-size: $fontsize +6px
                         color: $verydark-cyan
                         font-weight: $bold
+
                         &::placeholder
                             color: $verydark-cyan
+            .radiogroup
+                display: grid
+                grid-template-columns: 1fr 1fr 1fr
+                grid-gap: 18px
+                grid-auto-flow: row
+                list-style: none
+                li
+                    position: relative
+                    height: 60px
+                    background: $verydark-cyan
+                    width: 100%
+                    border-radius: $radius
+
+                    input, label
+                        display: block
+                        position: absolute
+                        top: 0
+                        left: 0
+                        right: 0
+                        bottom: 0
+                        padding: 5px
+                        cursor: pointer
+                        z-index: 90
+                        color: $white
+                        font-weight: $bold
+                        border-radius: $radius
+                        overflow: hidden
+
+                        &:hover
+                            background: $darkgrayish-cyan
+
+                        &[type="radio"]
+                            opacity: 0
+                            width: 0
+                            z-index: 100
+                            &:checked +label
+                                background-color: $cyan
+                        &[type="number"]
+                            text-align: center
+                            font-weight: $bold
+                            font-size: $fontsize
+                            border: none
+                            text-transform: uppercase
+                            overflow: hidden
 
         // * Right-block 
         .right-block
@@ -94,7 +140,7 @@ body
                 input[type="number"]
                     background-color: rgba(0, 0, 0, 0)
                     border: none
-                    width: 100px
+                    width: 120px
                     font-size: $fontsize +6px
                     color: $cyan
                     font-weight: $bold

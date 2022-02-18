@@ -18,7 +18,8 @@ body .wrapper {
 body .tip-app {
   margin: 80px auto 0;
   width: 75%;
-  background-color: lightgrey;
+  background-color: white;
+  border-radius: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,8 +33,6 @@ body .tip-app {
 }
 
 body .tip-app .left-block {
-  background-color: white;
-  border-radius: 16px;
   padding: 2em;
   width: 70%;
   height: 50vh;
@@ -41,6 +40,7 @@ body .tip-app .left-block {
 
 body .tip-app .left-block .title {
   text-align: start;
+  color: #7f9c9f;
 }
 
 body .tip-app .left-block .box .input {
@@ -57,11 +57,15 @@ body .tip-app .left-block .box .input {
   border-radius: 5.33333px;
 }
 
+body .tip-app .left-block .box .input i {
+  color: #7f9c9f;
+}
+
 body .tip-app .left-block .box .input input[type="number"] {
   text-align: end;
   background-color: rgba(0, 0, 0, 0);
   border: none;
-  width: 100px;
+  width: 120px;
   font-size: 30px;
   color: #00494d;
   font-weight: 700;
@@ -81,6 +85,63 @@ body .tip-app .left-block .box .input input[type="number"]::-ms-input-placeholde
 
 body .tip-app .left-block .box .input input[type="number"]::placeholder {
   color: #00494d;
+}
+
+body .tip-app .left-block .radiogroup {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 18px;
+  grid-auto-flow: row;
+  list-style: none;
+}
+
+body .tip-app .left-block .radiogroup li {
+  position: relative;
+  height: 60px;
+  background: #00494d;
+  width: 100%;
+  border-radius: 16px;
+}
+
+body .tip-app .left-block .radiogroup li input, body .tip-app .left-block .radiogroup li label {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 5px;
+  cursor: pointer;
+  z-index: 90;
+  color: white;
+  font-weight: 700;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+body .tip-app .left-block .radiogroup li input:hover, body .tip-app .left-block .radiogroup li label:hover {
+  background: #7f9c9f;
+}
+
+body .tip-app .left-block .radiogroup li input[type="radio"], body .tip-app .left-block .radiogroup li label[type="radio"] {
+  opacity: 0;
+  width: 0;
+  z-index: 100;
+}
+
+body .tip-app .left-block .radiogroup li input[type="radio"]:checked + label, body .tip-app .left-block .radiogroup li label[type="radio"]:checked + label {
+  background-color: #26c0ab;
+}
+
+body .tip-app .left-block .radiogroup li input[type="number"], body .tip-app .left-block .radiogroup li label[type="number"] {
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  border: none;
+  text-transform: uppercase;
+  overflow: hidden;
 }
 
 body .tip-app .right-block {
@@ -127,7 +188,7 @@ body .tip-app .right-block .totals {
 body .tip-app .right-block .totals input[type="number"] {
   background-color: rgba(0, 0, 0, 0);
   border: none;
-  width: 100px;
+  width: 120px;
   font-size: 30px;
   color: #26c0ab;
   font-weight: 700;

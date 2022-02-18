@@ -29,24 +29,35 @@
         </div>
 
         <h2 class="title">Select Tip %</h2>
-        <div>
-          <label for="5%">5%</label>
-          <input type="radio" name="tips" id="5%" value="5%">
+        <ul class="radiogroup">
+          <li>
+            <input type="radio" name="tips" id="5%" value="5%">
+            <label for="5%">5%</label>
+          </li>
+          <li>
+            <input type="radio" name="tips" id="10%" value="10%">
+            <label for="10%">10%</label>
+          </li>
+          <li>
+            <input type="radio" name="tips" id="15%" value="15%">
+            <label for="15%">15%</label>
+          </li>
 
-          <label for="10%">10%</label>
-          <input type="radio" name="tips" id="10%" value="10%">
+          <li>
+            <input type="radio" name="tips" id="25%" value="25%">
+            <label for="25%">25%</label>
+          </li>
 
-          <label for="15%">15%</label>
-          <input type="radio" name="tips" id="15%" value="15%">
+          <li>
+            <input type="radio" name="tips" id="50%" value="50%">
+            <label for="50%">50%</label>
+          </li>
 
-          <label for="25%">25%</label>
-          <input type="radio" name="tips" id="25%" value="25%">
+          <li>
+            <input type="number" name="tips" id="custom" placeholder="Custom">
+          </li>
 
-          <label for="50%">50%</label>
-          <input type="radio" name="tips" id="50%" value="50%">
-
-          <input type="number" name="tips" id="custom" placeholder="Custom">
-        </div>
+        </ul>
 
         <div class="box">
           <h2 class="title">Number of People</h2>
