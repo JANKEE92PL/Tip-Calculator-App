@@ -19,12 +19,16 @@
   <main class="wrapper">
     <form class="tip-app">
       <section class="left-block">
-        <h1>Bill</h1>
 
-        <label for="total"><i class='bx bx-dollar'></i></label>
-        <input type="number" name="total" id="total" placeholder="0">
+        <div class="box">
+          <h2 class="title">Bill</h2>
+          <div class="input">
+            <label for="total"><i class='bx bx-dollar'></i></label>
+            <input type="number" name="total" id="total" placeholder="0">
+          </div>
+        </div>
 
-        <h2>Select Tip %</h2>
+        <h2 class="title">Select Tip %</h2>
         <div>
           <label for="5%">5%</label>
           <input type="radio" name="tips" id="5%" value="5%">
@@ -43,11 +47,17 @@
 
           <input type="number" name="tips" id="custom" placeholder="Custom">
         </div>
-        <h2>Number of People</h2>
-        <label for="numberOfPeople"><i class='bx bx-user'></i></label>
-        <input type="number" name="numberOfPeople" id="numberOfPeople">
-        <div>
+
+        <div class="box">
+          <h2 class="title">Number of People</h2>
+          <div class="input">
+            <label for="numberOfPeople"><i class='bx bx-user'></i></label>
+            <input type="number" name="numberOfPeople" id="numberOfPeople" placeholder="0">
+          </div>
+        </div>
       </section>
+
+      <!-- BLOCK RIGHT -->
       <section class="right-block">
         <div class="box">
           <h2 class="title">Tip Amount<br><small class="muted">/ person</small></h2>

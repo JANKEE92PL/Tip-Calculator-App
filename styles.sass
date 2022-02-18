@@ -15,6 +15,7 @@ $darkgrayish-cyan: hsl(184, 14%, 56%)
 $lightgrayish-cyan: hsl(185, 41%, 84%)
 $lightgrayish-cyan: hsl(189, 41%, 97%)
 $white: hsl(0, 0%, 100%)
+$radius: 16px
 
 // * Querries
 
@@ -34,17 +35,43 @@ body
         text-align: center
     .tip-app
         margin: 80px auto 0
-        text-align: center
         width: 75%
-        background-color: lightyellow
+        background-color: lightgrey
         display: flex
         justify-content: space-evenly
         align-items: center
         padding: 2em
+        // * Left-block 
         .left-block
+            background-color: $white
+            border-radius: $radius
+            padding: 2em
+            width: 70%
+            height: 50vh
+            .title
+                text-align: start
+            .box
 
+                .input
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    background-color: $lightgrayish-cyan
+                    border-radius: $radius / 3
+                    input[type="number"]
+                        text-align: end
+                        background-color: rgba(0, 0, 0, 0)
+                        border: none
+                        width: 100px
+                        font-size: $fontsize +6px
+                        color: $verydark-cyan
+                        font-weight: $bold
+                        &::placeholder
+                            color: $verydark-cyan
+
+        // * Right-block 
         .right-block
-            border-radius: 16px
+            border-radius: $radius
             background-color: $verydark-cyan
             color: $cyan
             width: 30%
@@ -73,7 +100,7 @@ body
                     font-weight: $bold
 
             .resetBTN
-                border-radius: 6px
+                border-radius: $radius / 3
                 width: 100%
                 text-transform: uppercase
                 height: 32px

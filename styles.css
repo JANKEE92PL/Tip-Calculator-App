@@ -17,9 +17,8 @@ body .wrapper {
 
 body .tip-app {
   margin: 80px auto 0;
-  text-align: center;
   width: 75%;
-  background-color: lightyellow;
+  background-color: lightgrey;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,6 +29,58 @@ body .tip-app {
       -ms-flex-align: center;
           align-items: center;
   padding: 2em;
+}
+
+body .tip-app .left-block {
+  background-color: white;
+  border-radius: 16px;
+  padding: 2em;
+  width: 70%;
+  height: 50vh;
+}
+
+body .tip-app .left-block .title {
+  text-align: start;
+}
+
+body .tip-app .left-block .box .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #f4fafa;
+  border-radius: 5.33333px;
+}
+
+body .tip-app .left-block .box .input input[type="number"] {
+  text-align: end;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  width: 100px;
+  font-size: 30px;
+  color: #00494d;
+  font-weight: 700;
+}
+
+body .tip-app .left-block .box .input input[type="number"]::-webkit-input-placeholder {
+  color: #00494d;
+}
+
+body .tip-app .left-block .box .input input[type="number"]:-ms-input-placeholder {
+  color: #00494d;
+}
+
+body .tip-app .left-block .box .input input[type="number"]::-ms-input-placeholder {
+  color: #00494d;
+}
+
+body .tip-app .left-block .box .input input[type="number"]::placeholder {
+  color: #00494d;
 }
 
 body .tip-app .right-block {
@@ -83,7 +134,7 @@ body .tip-app .right-block .totals input[type="number"] {
 }
 
 body .tip-app .right-block .resetBTN {
-  border-radius: 6px;
+  border-radius: 5.33333px;
   width: 100%;
   text-transform: uppercase;
   height: 32px;
