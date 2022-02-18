@@ -10,35 +10,70 @@
 
   <title>Tip calculator app</title>
   <link rel="stylesheet" href="styles.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
 
 </head>
 
 <body>
+  <main class="wrapper">
+    <form class="tip-app">
+      <section class="left-block">
+        <h1>Bill</h1>
 
-  Bill
+        <label for="total"><i class='bx bx-dollar'></i></label>
+        <input type="number" name="total" id="total" placeholder="0">
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+        <h2>Select Tip %</h2>
+        <div>
+          <label for="5%">5%</label>
+          <input type="radio" name="tips" id="5%" value="5%">
 
-  Number of People
+          <label for="10%">10%</label>
+          <input type="radio" name="tips" id="10%" value="10%">
 
-  Tip Amount
-  / person
+          <label for="15%">15%</label>
+          <input type="radio" name="tips" id="15%" value="15%">
 
-  Total
-  / person
+          <label for="25%">25%</label>
+          <input type="radio" name="tips" id="25%" value="25%">
 
-  Reset
+          <label for="50%">50%</label>
+          <input type="radio" name="tips" id="50%" value="50%">
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+          <input type="number" name="tips" id="custom" placeholder="Custom">
+        </div>
+        <h2>Number of People</h2>
+        <label for="numberOfPeople"><i class='bx bx-user'></i></label>
+        <input type="number" name="numberOfPeople" id="numberOfPeople">
+        <div>
+      </section>
+      <section class="right-block">
+        <div class="box">
+          <h2>Tip Amount<br><small class="muted">/ person</small></h2>
+          <div class="totals">
+            <label for="amountPerson">$</label>
+            <input type="number" name="amountPerson" id="amountPerson" value="4.27" readonly>
+          </div>
+        </div>
+        <div class="right-box">
+          <div class="box">
+            <h2>Total<br><small class="muted">/ person</small></h2>
+            <div class="totals">
+              <label for="totalamount">$</label>
+              <input type="number" name="totalamount" id="totalamount" value="32.79" readonly>
+            </div>
+          </div>
+        </div>
+        <input type="reset" value="Reset" class="resetBTN">
+      </section>
+    </form>
+  </main>
+
+
+  <footer class="footer">
+    Coded by <a href="https://github.com/JANKEE92PL" target="blank">JANKEE92PL</a>.
+  </footer>
 </body>
 
 </html>

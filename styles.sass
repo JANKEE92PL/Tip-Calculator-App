@@ -29,8 +29,62 @@ $desktop: 1440px
 
 body
     font-family: 'Roboto', sans-serif
-    .attribution
-        font-size: 11px
+    background-color: $lightgrayish-cyan
+    .wrapper
+        text-align: center
+    .tip-app
+        margin: 80px auto 0
+        text-align: center
+        width: 75%
+        background-color: lightyellow
+        display: flex
+        justify-content: space-evenly
+        align-items: center
+        padding: 2em
+        .left-block
+
+        .right-block
+            border-radius: 16px
+            background-color: $verydark-cyan
+            color: $cyan
+            width: 50%
+            height: 50vh
+            padding: 2em
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            .box
+                display: flex
+                justify-content: space-evenly
+                align-items: baseline
+            .totals
+                font-size: $fontsize
+
+                input[type="number"]
+                    background-color: rgba(0, 0, 0, 0)
+                    border: none
+                    padding: 6px 12px
+                    font-size: $fontsize +6px
+                    color: $cyan
+                    font-weight: $bold
+
+            .resetBTN
+                border-radius: 6px
+                height: 32px
+                width: 50%
+                background-color: $cyan
+                color: $verydark-cyan
+                font-weight: $bold
+                border: none
+                align-self: center
+
+    .shadow
+        box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.2)
+    .muted
+        color: $darkgrayish-cyan
+    .footer
+        margin: 80px auto 0
         text-align: center
         a
-            color: hsl(228, 45%, 44%)
+            &:visited
+                color: hsl(228, 45%, 44%)

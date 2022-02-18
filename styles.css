@@ -8,14 +8,102 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: #f4fafa;
 }
 
-body .attribution {
-  font-size: 11px;
+body .wrapper {
   text-align: center;
 }
 
-body .attribution a {
+body .tip-app {
+  margin: 80px auto 0;
+  text-align: center;
+  width: 75%;
+  background-color: lightyellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2em;
+}
+
+body .tip-app .right-block {
+  border-radius: 16px;
+  background-color: #00494d;
+  color: #26c0ab;
+  width: 50%;
+  height: 50vh;
+  padding: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .tip-app .right-block .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+body .tip-app .right-block .totals {
+  font-size: 24px;
+}
+
+body .tip-app .right-block .totals input[type="number"] {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  padding: 6px 12px;
+  font-size: 30px;
+  color: #26c0ab;
+  font-weight: 700;
+}
+
+body .tip-app .right-block .resetBTN {
+  border-radius: 6px;
+  height: 32px;
+  width: 50%;
+  background-color: #26c0ab;
+  color: #00494d;
+  font-weight: 700;
+  border: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body .shadow {
+  -webkit-box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.2);
+}
+
+body .muted {
+  color: #7f9c9f;
+}
+
+body .footer {
+  margin: 80px auto 0;
+  text-align: center;
+}
+
+body .footer a:visited {
   color: #3e52a3;
 }
 /*# sourceMappingURL=styles.css.map */
