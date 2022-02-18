@@ -36,7 +36,7 @@ body .tip-app .right-block {
   border-radius: 16px;
   background-color: #00494d;
   color: #26c0ab;
-  width: 50%;
+  width: 30%;
   height: 50vh;
   padding: 2em;
   display: -webkit-box;
@@ -55,9 +55,9 @@ body .tip-app .right-block .box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
@@ -70,7 +70,7 @@ body .tip-app .right-block .totals {
 body .tip-app .right-block .totals input[type="number"] {
   background-color: rgba(0, 0, 0, 0);
   border: none;
-  padding: 6px 12px;
+  width: 100px;
   font-size: 30px;
   color: #26c0ab;
   font-weight: 700;
@@ -78,8 +78,9 @@ body .tip-app .right-block .totals input[type="number"] {
 
 body .tip-app .right-block .resetBTN {
   border-radius: 6px;
+  width: 100%;
+  text-transform: uppercase;
   height: 32px;
-  width: 50%;
   background-color: #26c0ab;
   color: #00494d;
   font-weight: 700;

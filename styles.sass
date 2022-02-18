@@ -47,7 +47,7 @@ body
             border-radius: 16px
             background-color: $verydark-cyan
             color: $cyan
-            width: 50%
+            width: 30%
             height: 50vh
             padding: 2em
             display: flex
@@ -55,23 +55,26 @@ body
             justify-content: space-between
             .box
                 display: flex
-                justify-content: space-evenly
+                justify-content: space-between
                 align-items: baseline
+            .title
+
             .totals
                 font-size: $fontsize
 
                 input[type="number"]
                     background-color: rgba(0, 0, 0, 0)
                     border: none
-                    padding: 6px 12px
+                    width: 100px
                     font-size: $fontsize +6px
                     color: $cyan
                     font-weight: $bold
 
             .resetBTN
                 border-radius: 6px
+                width: 100%
+                text-transform: uppercase
                 height: 32px
-                width: 50%
                 background-color: $cyan
                 color: $verydark-cyan
                 font-weight: $bold
