@@ -84,10 +84,14 @@ body .tip-app .left-block .box .input input[type="number"] {
   text-align: end;
   background-color: rgba(0, 0, 0, 0);
   border: none;
-  width: 120px;
+  width: 50%;
   font-size: 30px;
   color: #00494d;
   font-weight: 700;
+}
+
+body .tip-app .left-block .box .input input[type="number"]:active, body .tip-app .left-block .box .input input[type="number"]:focus, body .tip-app .left-block .box .input input[type="number"]:checked {
+  outline: none;
 }
 
 body .tip-app .left-block .box .input input[type="number"]::-webkit-input-placeholder {
@@ -216,7 +220,7 @@ body .tip-app .right-block .totals {
 body .tip-app .right-block .totals input[type="number"] {
   background-color: rgba(0, 0, 0, 0);
   border: none;
-  width: 115px;
+  width: 140px;
   font-size: 40px;
   color: #26c0ab;
   font-weight: 700;

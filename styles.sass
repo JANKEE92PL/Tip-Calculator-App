@@ -72,10 +72,12 @@ body
                         text-align: end
                         background-color: rgba(0, 0, 0, 0)
                         border: none
-                        width: 120px
+                        width: 50%
                         font-size: $fontsize +6px
                         color: $verydark-cyan
                         font-weight: $bold
+                        &:active, &:focus, &:checked
+                            outline: none
 
                         &::placeholder
                             color: $verydark-cyan
@@ -156,7 +158,7 @@ body
                 input[type="number"]
                     background-color: rgba(0, 0, 0, 0)
                     border: none
-                    width: 115px
+                    width: 140px
                     font-size: $fontsize + 16px
                     color: $cyan
                     font-weight: $bold
