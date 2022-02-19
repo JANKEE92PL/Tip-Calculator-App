@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -5,12 +6,249 @@
           box-sizing: border-box;
 }
 
-.attribution {
-  font-size: 11px;
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #c5e4e7;
+}
+
+body .wrapper {
   text-align: center;
 }
 
-.attribution a {
+body .tip-app {
+  margin: 80px auto 0;
+  width: 65%;
+  background-color: white;
+  border-radius: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2em;
+}
+
+body .tip-app .left-block {
+  padding: 0 2em;
+  width: 60%;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .tip-app .left-block .title {
+  text-align: start;
+  color: #5e7a7d;
+}
+
+body .tip-app .left-block .box .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-top: 1rem;
+  height: 40px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #f4fafa;
+  border-radius: 5.33333px;
+}
+
+body .tip-app .left-block .box .input i {
+  color: #7f9c9f;
+}
+
+body .tip-app .left-block .box .input input[type="number"] {
+  text-align: end;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  width: 120px;
+  font-size: 30px;
+  color: #00494d;
+  font-weight: 700;
+}
+
+body .tip-app .left-block .box .input input[type="number"]::-webkit-input-placeholder {
+  color: #00494d;
+}
+
+body .tip-app .left-block .box .input input[type="number"]:-ms-input-placeholder {
+  color: #00494d;
+}
+
+body .tip-app .left-block .box .input input[type="number"]::-ms-input-placeholder {
+  color: #00494d;
+}
+
+body .tip-app .left-block .box .input input[type="number"]::placeholder {
+  color: #00494d;
+}
+
+body .tip-app .left-block .radiogroup {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 18px;
+  grid-auto-flow: row;
+  list-style: none;
+}
+
+body .tip-app .left-block .radiogroup li {
+  position: relative;
+  height: 60px;
+  background: #00494d;
+  width: 100%;
+  border-radius: 16px;
+}
+
+body .tip-app .left-block .radiogroup li input, body .tip-app .left-block .radiogroup li label {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 90;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+body .tip-app .left-block .radiogroup li input:hover, body .tip-app .left-block .radiogroup li label:hover {
+  background: #5e7a7d;
+}
+
+body .tip-app .left-block .radiogroup li input[type="radio"], body .tip-app .left-block .radiogroup li label[type="radio"] {
+  opacity: 0;
+  width: 0;
+  z-index: 100;
+}
+
+body .tip-app .left-block .radiogroup li input[type="radio"]:checked + label, body .tip-app .left-block .radiogroup li label[type="radio"]:checked + label {
+  background-color: #26c0ab;
+}
+
+body .tip-app .left-block .radiogroup li input[type="number"], body .tip-app .left-block .radiogroup li label[type="number"] {
+  background-color: #f4fafa;
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  border: none;
+  color: #00494d;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+body .tip-app .left-block .radiogroup li input[type="number"]:active, body .tip-app .left-block .radiogroup li input[type="number"]:focus, body .tip-app .left-block .radiogroup li input[type="number"]:checked, body .tip-app .left-block .radiogroup li label[type="number"]:active, body .tip-app .left-block .radiogroup li label[type="number"]:focus, body .tip-app .left-block .radiogroup li label[type="number"]:checked {
+  outline: none;
+}
+
+body .tip-app .right-block {
+  border-radius: 16px;
+  background-color: #00494d;
+  color: #26c0ab;
+  width: 40%;
+  height: 50vh;
+  padding: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .tip-app .right-block .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+body .tip-app .right-block .title {
+  color: white;
+  text-align: start;
+  letter-spacing: 1px;
+}
+
+body .tip-app .right-block .totals {
+  font-size: 32px;
+  font-weight: 700;
+  text-align-last: right;
+}
+
+body .tip-app .right-block .totals input[type="number"] {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  width: 115px;
+  font-size: 40px;
+  color: #26c0ab;
+  font-weight: 700;
+}
+
+body .tip-app .right-block .resetBTN {
+  border-radius: 5.33333px;
+  width: 100%;
+  text-transform: uppercase;
+  height: 32px;
+  background-color: #26c0ab;
+  color: #00494d;
+  font-weight: 700;
+  border: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body .shadow {
+  -webkit-box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.2);
+}
+
+body .muted {
+  color: #7f9c9f;
+}
+
+body .footer {
+  margin: 80px auto 0;
+  text-align: center;
+}
+
+body .footer a:visited {
   color: #3e52a3;
 }
 /*# sourceMappingURL=styles.css.map */

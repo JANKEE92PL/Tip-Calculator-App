@@ -1,6 +1,6 @@
 // * FONTS 
 
-@import url(https://fonts.google.com/specimen/Space+Mono)
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap')
 $light: 400
 $medium: 500
 $bold: 700
@@ -9,12 +9,13 @@ $fontsize: 24px
 // * Variables   
 
 $cyan: hsl(172, 67%, 45%)
-$very dark-cyan: hsl(183, 100%, 15%)
-$dark grayish-cyan: hsl(186, 14%, 43%)
-$dark grayish-cyan: hsl(184, 14%, 56%)
-$light grayish-cyan: hsl(185, 41%, 84%)
-$light grayish-cyan: hsl(189, 41%, 97%)
+$verydark-cyan: hsl(183, 100%, 15%)
+$darkgrayish-cyan: hsl(186, 14%, 43%)
+$darkgrayish-cyan-light: hsl(184, 14%, 56%)
+$lightgrayish-cyan: hsl(185, 41%, 84%)
+$lightgrayish-cyan-light: hsl(189, 41%, 97%)
 $white: hsl(0, 0%, 100%)
+$radius: 16px
 
 // * Querries
 
@@ -27,8 +28,156 @@ $desktop: 1440px
     padding: 0
     box-sizing: border-box
 
-.attribution
-    font-size: 11px
-    text-align: center
-    a
-        color: hsl(228, 45%, 44%)
+body
+    font-family: 'Roboto', sans-serif
+    background-color: $lightgrayish-cyan
+    .wrapper
+        text-align: center
+    .tip-app
+        margin: 80px auto 0
+        width: 65%
+        background-color: $white
+        border-radius: $radius
+        display: flex
+        justify-content: space-evenly
+        align-items: center
+        padding: 2em
+        // * Left-block 
+        .left-block
+            padding: 0 2em
+            width: 60%
+            height: 50vh
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+
+            .title
+                text-align: start
+                color: $darkgrayish-cyan
+            .box
+                .input
+                    display: flex
+                    align-items: center
+                    flex-wrap: wrap
+                    flex-grow: 1
+                    margin-top: 1rem
+                    height: 40px
+                    justify-content: space-between
+                    background-color: $lightgrayish-cyan-light
+                    border-radius: $radius / 3
+                    i
+                        color: $darkgrayish-cyan-light
+                    input[type="number"]
+                        text-align: end
+                        background-color: rgba(0, 0, 0, 0)
+                        border: none
+                        width: 120px
+                        font-size: $fontsize +6px
+                        color: $verydark-cyan
+                        font-weight: $bold
+
+                        &::placeholder
+                            color: $verydark-cyan
+            .radiogroup
+                display: grid
+                grid-template-columns: 1fr 1fr 1fr
+                grid-gap: 18px
+                grid-auto-flow: row
+                list-style: none
+                li
+                    position: relative
+                    height: 60px
+                    background: $verydark-cyan
+                    width: 100%
+                    border-radius: $radius
+
+                    input, label
+                        display: block
+                        position: absolute
+                        top: 0
+                        left: 0
+                        right: 0
+                        bottom: 0
+                        padding: 1rem
+                        cursor: pointer
+                        z-index: 90
+                        color: $white
+                        font-size: $fontsize
+                        font-weight: $bold
+                        border-radius: $radius
+                        overflow: hidden
+
+                        &:hover
+                            background: $darkgrayish-cyan
+
+                        &[type="radio"]
+                            opacity: 0
+                            width: 0
+                            z-index: 100
+                            &:checked +label
+                                background-color: $cyan
+                        &[type="number"]
+                            background-color: $lightgrayish-cyan-light
+                            text-align: center
+                            font-weight: $bold
+                            font-size: $fontsize
+                            border: none
+                            color: $verydark-cyan
+                            text-transform: uppercase
+                            overflow: hidden
+                            &:active, &:focus, &:checked
+                                outline: none
+
+        // * Right-block 
+        .right-block
+            border-radius: $radius
+            background-color: $verydark-cyan
+            color: $cyan
+            width: 40%
+            height: 50vh
+            padding: 2em
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            .box
+                display: flex
+                justify-content: space-between
+                align-items: baseline
+            .title
+                color: $white
+                text-align: start
+                letter-spacing: 1px
+            .totals
+                font-size: $fontsize + 8px
+                font-weight: $bold
+                text-align-last: right
+
+                input[type="number"]
+                    background-color: rgba(0, 0, 0, 0)
+                    border: none
+                    width: 115px
+                    font-size: $fontsize + 16px
+                    color: $cyan
+                    font-weight: $bold
+
+            .resetBTN
+                border-radius: $radius / 3
+                width: 100%
+                text-transform: uppercase
+                height: 32px
+                background-color: $cyan
+                color: $verydark-cyan
+                font-weight: $bold
+                border: none
+                align-self: center
+
+    .shadow
+        box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.2)
+    .muted
+        color: $darkgrayish-cyan-light
+    .footer
+        margin: 80px auto 0
+        text-align: center
+        a
+            &:visited
+                color: hsl(228, 45%, 44%)

@@ -1,40 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Tip calculator app</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
 
 </head>
+
 <body>
+  <main class="wrapper">
+    <form class="tip-app">
+      <section class="left-block">
 
-  Bill
+        <div class="box">
+          <h2 class="title">Bill</h2>
+          <div class="input">
+            <label for="total"><i class='bx bx-dollar'></i></label>
+            <input type="number" name="total" id="total" placeholder="0" min="0">
+          </div>
+        </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+        <h2 class="title">Select Tip %</h2>
+        <ul class="radiogroup">
+          <li>
+            <input type="radio" name="tips" id="5%" value="5%">
+            <label for="5%">5%</label>
+          </li>
+          <li>
+            <input type="radio" name="tips" id="10%" value="10%">
+            <label for="10%">10%</label>
+          </li>
+          <li>
+            <input type="radio" name="tips" id="15%" value="15%">
+            <label for="15%">15%</label>
+          </li>
 
-  Number of People
+          <li>
+            <input type="radio" name="tips" id="25%" value="25%">
+            <label for="25%">25%</label>
+          </li>
 
-  Tip Amount
-  / person
+          <li>
+            <input type="radio" name="tips" id="50%" value="50%">
+            <label for="50%">50%</label>
+          </li>
 
-  Total
-  / person
+          <li>
+            <input type="number" name="tips" id="custom" placeholder="Custom" min="0">
+          </li>
 
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+        </ul>
+
+        <div class="box">
+          <h2 class="title">Number of People</h2>
+          <div class="input">
+            <label for="numberOfPeople"><i class='bx bx-user'></i></label>
+            <input type="number" name="numberOfPeople" id="numberOfPeople" placeholder="0" min="0">
+          </div>
+        </div>
+      </section>
+
+      <!-- BLOCK RIGHT -->
+      <section class="right-block">
+        <div class="box">
+          <h2 class="title">Tip Amount<br><small class="muted">/ person</small></h2>
+          <div class="totals">
+            <label for="amountPerson">$</label>
+            <input type="number" name="amountPerson" id="amountPerson" value="4.27" readonly>
+          </div>
+        </div>
+        <div class="box">
+          <h2 class="title">Total<br><small class="muted">/ person</small></h2>
+          <div class="totals">
+            <label for="totalamount">$</label>
+            <input type="number" name="totalamount" id="totalamount" value="32.79" readonly>
+          </div>
+        </div>
+        <input type="reset" value="Reset" class="resetBTN">
+      </section>
+    </form>
+  </main>
+
+
+  <footer class="footer">
+    Coded by <a href="https://github.com/JANKEE92PL" target="blank">JANKEE92PL</a>.
+  </footer>
 </body>
+
 </html>
