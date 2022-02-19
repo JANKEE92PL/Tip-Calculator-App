@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #f4fafa;
+  background-color: #c5e4e7;
 }
 
 body .wrapper {
@@ -17,7 +17,7 @@ body .wrapper {
 
 body .tip-app {
   margin: 80px auto 0;
-  width: 75%;
+  width: 65%;
   background-color: white;
   border-radius: 16px;
   display: -webkit-box;
@@ -33,14 +33,24 @@ body .tip-app {
 }
 
 body .tip-app .left-block {
-  padding: 2em;
-  width: 70%;
+  padding: 0 2em;
+  width: 60%;
   height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 body .tip-app .left-block .title {
   text-align: start;
-  color: #7f9c9f;
+  color: #5e7a7d;
 }
 
 body .tip-app .left-block .box .input {
@@ -50,6 +60,13 @@ body .tip-app .left-block .box .input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-top: 1rem;
+  height: 40px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -112,17 +129,18 @@ body .tip-app .left-block .radiogroup li input, body .tip-app .left-block .radio
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 5px;
+  padding: 1rem;
   cursor: pointer;
   z-index: 90;
   color: white;
+  font-size: 24px;
   font-weight: 700;
   border-radius: 16px;
   overflow: hidden;
 }
 
 body .tip-app .left-block .radiogroup li input:hover, body .tip-app .left-block .radiogroup li label:hover {
-  background: #7f9c9f;
+  background: #5e7a7d;
 }
 
 body .tip-app .left-block .radiogroup li input[type="radio"], body .tip-app .left-block .radiogroup li label[type="radio"] {
@@ -136,19 +154,25 @@ body .tip-app .left-block .radiogroup li input[type="radio"]:checked + label, bo
 }
 
 body .tip-app .left-block .radiogroup li input[type="number"], body .tip-app .left-block .radiogroup li label[type="number"] {
+  background-color: #f4fafa;
   text-align: center;
   font-weight: 700;
   font-size: 24px;
   border: none;
+  color: #00494d;
   text-transform: uppercase;
   overflow: hidden;
+}
+
+body .tip-app .left-block .radiogroup li input[type="number"]:active, body .tip-app .left-block .radiogroup li input[type="number"]:focus, body .tip-app .left-block .radiogroup li input[type="number"]:checked, body .tip-app .left-block .radiogroup li label[type="number"]:active, body .tip-app .left-block .radiogroup li label[type="number"]:focus, body .tip-app .left-block .radiogroup li label[type="number"]:checked {
+  outline: none;
 }
 
 body .tip-app .right-block {
   border-radius: 16px;
   background-color: #00494d;
   color: #26c0ab;
-  width: 30%;
+  width: 40%;
   height: 50vh;
   padding: 2em;
   display: -webkit-box;
@@ -178,18 +202,20 @@ body .tip-app .right-block .box {
 body .tip-app .right-block .title {
   color: white;
   text-align: start;
+  letter-spacing: 1px;
 }
 
 body .tip-app .right-block .totals {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 700;
+  text-align-last: right;
 }
 
 body .tip-app .right-block .totals input[type="number"] {
   background-color: rgba(0, 0, 0, 0);
   border: none;
-  width: 120px;
-  font-size: 30px;
+  width: 115px;
+  font-size: 40px;
   color: #26c0ab;
   font-weight: 700;
 }

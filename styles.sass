@@ -11,9 +11,9 @@ $fontsize: 24px
 $cyan: hsl(172, 67%, 45%)
 $verydark-cyan: hsl(183, 100%, 15%)
 $darkgrayish-cyan: hsl(186, 14%, 43%)
-$darkgrayish-cyan: hsl(184, 14%, 56%)
+$darkgrayish-cyan-light: hsl(184, 14%, 56%)
 $lightgrayish-cyan: hsl(185, 41%, 84%)
-$lightgrayish-cyan: hsl(189, 41%, 97%)
+$lightgrayish-cyan-light: hsl(189, 41%, 97%)
 $white: hsl(0, 0%, 100%)
 $radius: 16px
 
@@ -35,7 +35,7 @@ body
         text-align: center
     .tip-app
         margin: 80px auto 0
-        width: 75%
+        width: 65%
         background-color: $white
         border-radius: $radius
         display: flex
@@ -44,9 +44,13 @@ body
         padding: 2em
         // * Left-block 
         .left-block
-            padding: 2em
-            width: 70%
+            padding: 0 2em
+            width: 60%
             height: 50vh
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+
             .title
                 text-align: start
                 color: $darkgrayish-cyan
@@ -54,11 +58,15 @@ body
                 .input
                     display: flex
                     align-items: center
+                    flex-wrap: wrap
+                    flex-grow: 1
+                    margin-top: 1rem
+                    height: 40px
                     justify-content: space-between
-                    background-color: $lightgrayish-cyan
+                    background-color: $lightgrayish-cyan-light
                     border-radius: $radius / 3
                     i
-                        color: $darkgrayish-cyan
+                        color: $darkgrayish-cyan-light
                     input[type="number"]
                         text-align: end
                         background-color: rgba(0, 0, 0, 0)
@@ -90,10 +98,11 @@ body
                         left: 0
                         right: 0
                         bottom: 0
-                        padding: 5px
+                        padding: 1rem
                         cursor: pointer
                         z-index: 90
                         color: $white
+                        font-size: $fontsize
                         font-weight: $bold
                         border-radius: $radius
                         overflow: hidden
@@ -108,19 +117,23 @@ body
                             &:checked +label
                                 background-color: $cyan
                         &[type="number"]
+                            background-color: $lightgrayish-cyan-light
                             text-align: center
                             font-weight: $bold
                             font-size: $fontsize
                             border: none
+                            color: $verydark-cyan
                             text-transform: uppercase
                             overflow: hidden
+                            &:active, &:focus, &:checked
+                                outline: none
 
         // * Right-block 
         .right-block
             border-radius: $radius
             background-color: $verydark-cyan
             color: $cyan
-            width: 30%
+            width: 40%
             height: 50vh
             padding: 2em
             display: flex
@@ -133,15 +146,17 @@ body
             .title
                 color: $white
                 text-align: start
+                letter-spacing: 1px
             .totals
-                font-size: $fontsize
+                font-size: $fontsize + 8px
                 font-weight: $bold
+                text-align-last: right
 
                 input[type="number"]
                     background-color: rgba(0, 0, 0, 0)
                     border: none
-                    width: 120px
-                    font-size: $fontsize +6px
+                    width: 115px
+                    font-size: $fontsize + 16px
                     color: $cyan
                     font-weight: $bold
 
@@ -159,7 +174,7 @@ body
     .shadow
         box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.2)
     .muted
-        color: $darkgrayish-cyan
+        color: $darkgrayish-cyan-light
     .footer
         margin: 80px auto 0
         text-align: center
