@@ -30,6 +30,8 @@ body .tip-app {
       -ms-flex-align: center;
           align-items: center;
   padding: 2em;
+  -webkit-box-shadow: 25px 25px 60px #7f9c9f, -25px -25px 60px #f4fafa;
+          box-shadow: 25px 25px 60px #7f9c9f, -25px -25px 60px #f4fafa;
 }
 
 body .tip-app .left-block {
