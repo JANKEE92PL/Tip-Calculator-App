@@ -19,18 +19,19 @@ const checkTip = () => {
 
 const checkCustomTip = (input) => {
   if (input.value) {
-    return input.value;
+    return Number(input.value);
   }
   return;
 };
 
 const calculateAmount = () => {
+  let result;
   result = (bill * (checkTip() / 100)) / numberOfPeople;
-  return result;
+  return Number(result);
 };
 const calculateTotal = () => {};
 
 // * Function CALLS
-checkTip();
-checkCustomTip(customTip);
-calculateAmount();
+checkTip(); // ! WORKS
+checkCustomTip(customTip); // ! WORKS
+// calculateAmount(); // TODO
