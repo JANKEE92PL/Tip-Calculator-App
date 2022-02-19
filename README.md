@@ -1,4 +1,4 @@
-#Tip calculator app
+# Tip calculator app
 
 ![image](https://user-images.githubusercontent.com/65852150/154813224-a2bf5f62-94cf-4bbf-88c5-361e066419ee.png)
 
